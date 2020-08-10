@@ -5,3 +5,9 @@ dependencies:
   url: https://github.com/Jumps-Org/jx-spring-boot.git
   version: ""
   versionURL: ""
+- host: github.com
+  owner: Jumps-Org
+  repo: spring-boot-gradle
+  url: https://github.com/Jumps-Org/spring-boot-gradle.git
+  version: ""
+  versionURL: ""

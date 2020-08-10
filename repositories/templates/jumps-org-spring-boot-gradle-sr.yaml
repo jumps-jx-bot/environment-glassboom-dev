@@ -1,0 +1,21 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: Jumps-Org
+    provider: github
+    repository: spring-boot-gradle
+  name: jumps-org-spring-boot-gradle
+spec:
+  description: Imported application for Jumps-Org/spring-boot-gradle
+  httpCloneURL: https://github.com/Jumps-Org/spring-boot-gradle.git
+  org: Jumps-Org
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: spring-boot-gradle
+  scheduler:
+    kind: ""
+    name: ""
+  url: https://github.com/Jumps-Org/spring-boot-gradle.git

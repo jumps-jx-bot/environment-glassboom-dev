@@ -1,0 +1,10 @@
+adminUser:
+  password: vault:glassboom/adminUser:password
+  username: admin
+enableDocker: false
+pipelineUser:
+  email: jumps.jx.bot@gmail.com
+  token: vault:glassboom/pipelineUser:token
+  username: jumps-jx-bot
+prow:
+  hmacToken: vault:glassboom/prow:hmacToken

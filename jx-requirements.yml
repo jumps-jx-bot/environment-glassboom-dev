@@ -1,39 +1,83 @@
 autoUpdate:
   enabled: false
   schedule: ""
+bootConfigURL: https://github.com/cloudbees/cloudbees-jenkins-x-boot-config.git
 cluster:
-  clusterName: ""
-  environmentGitOwner: ""
-  environmentGitPublic: true
-  project: ""
   azure: {}
+  clusterName: glassboom
+  devEnvApprovers:
+  - jump-23
+  environmentGitOwner: Jumps-Org
+  environmentGitPublic: true
+  gitKind: github
+  gitName: github
+  gitServer: https://github.com
+  namespace: jx
+  project: copper-tempo-285315
   provider: gke
-  zone: ""
-gitops: true
+  registry: gcr.io
+  zone: us-central1-a
 environments:
-  - key: dev
-  - key: staging
-  - key: production
+- ingress:
+    domain: 34.69.40.67.nip.io
+    externalDNS: false
+    namespaceSubDomain: -jx.
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: dev
+  repository: environment-glassboom-dev
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: staging
+  repository: environment-glassboom-staging
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: production
+  repository: environment-glassboom-production
+gitops: true
 ingress:
-  domain: ""
+  domain: 34.69.40.67.nip.io
   externalDNS: false
+  namespaceSubDomain: -jx.
   tls:
     email: ""
     enabled: false
     production: false
 kaniko: true
+repository: nexus
 secretStorage: vault
 storage:
+  backup:
+    enabled: false
+    url: ""
   logs:
     enabled: true
-    url: ""
+    url: gs://glassboom-logs-c9b440ee-8406-4740-b7ee-82dac1ffff8b
   reports:
     enabled: true
-    url: ""
+    url: gs://glassboom-reports-615dde2d-0285-499f-a0d6-7de108c19298
   repository:
     enabled: true
-    url: ""
+    url: gs://glassboom-repository-39ab9e54-5299-4fdf-98cd-ec8658deed
+vault: {}
+velero:
+  schedule: ""
+  ttl: ""
 versionStream:
-  ref: 2.1.78+cjxd.11
+  ref: v0.0.36
   url: https://github.com/cloudbees/cloudbees-jenkins-x-versions.git
 webhook: lighthouse

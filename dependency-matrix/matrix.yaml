@@ -1,0 +1,7 @@
+dependencies:
+- host: github.com
+  owner: Jumps-Org
+  repo: jx-spring-boot
+  url: https://github.com/Jumps-Org/jx-spring-boot.git
+  version: ""
+  versionURL: ""

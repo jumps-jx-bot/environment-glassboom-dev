@@ -1,0 +1,21 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: Jumps-Org
+    provider: github
+    repository: innovation-spring-boot
+  name: jumps-org-innovation-spring-boot
+spec:
+  description: Imported application for Jumps-Org/innovation-spring-boot
+  httpCloneURL: https://github.com/Jumps-Org/innovation-spring-boot.git
+  org: Jumps-Org
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: innovation-spring-boot
+  scheduler:
+    kind: ""
+    name: ""
+  url: https://github.com/Jumps-Org/innovation-spring-boot.git
